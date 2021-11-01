@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="299dp"
+        android:layout_width="266dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:background="@color/colorPrimary"
@@ -32,14 +32,14 @@
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
         android:textSize="60sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_toast"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_zero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_toast" />
+        app:layout_constraintStart_toEndOf="@+id/button_zero" />
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="298dp"
+        android:layout_width="265dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
@@ -47,9 +47,24 @@
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
         android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/button_count"
+        app:layout_constraintEnd_toStartOf="@+id/button_zero"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_zero"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/button_label_zero"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:onClick="showCountToZero"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_toast"
+        app:layout_constraintEnd_toStartOf="@+id/button_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_toast" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
