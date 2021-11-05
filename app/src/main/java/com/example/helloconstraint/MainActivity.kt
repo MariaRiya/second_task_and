@@ -1,5 +1,6 @@
 package com.example.helloconstraint
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +17,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showToast(view: View) {
-        Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT).show()
+        val newIntent = Intent(this, SecondActivity::class.java)
+        newIntent.putExtra("COUNT", mCount)
+        startActivity(newIntent)
     }
     fun countUp(view: View) {
         if(mCount == 0){
